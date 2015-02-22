@@ -1,7 +1,7 @@
 ## Matrix inversion is usually a costly computation and there may be some benefit to caching the inverse of a matrix 
 ## rather than compute it repeatedly. Below functions can be used to cache the inverse of a matrix in to a list.
 
-## This fucntion will take the input matrix and create a list whcich can be input to cacheSlve function. 
+## This fucntion will take the input matrix and create a list whcich can be input to cacheSolve function. 
 ## asumption: input matrix will be invertible. no special checks to validate the same is being done below.  
 
 makeCacheMatrix <- function(x = matrix()) {
