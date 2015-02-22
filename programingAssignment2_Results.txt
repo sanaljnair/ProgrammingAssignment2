@@ -1,0 +1,41 @@
+sample Run:
+
+> x
+Error: object 'x' not found
+> x <- rbind(c(4,3),c(3,2))
+> x
+     [,1] [,2]
+[1,]    4    3
+[2,]    3    2
+> lof <- makeCacheMatrix(x)
+> lof$getInv
+function() mInv
+<environment: 0x00000000092caac8>
+> cacheSolve(lof)
+     [,1] [,2]
+[1,]   -2    3
+[2,]    3   -4
+> cacheSolve(lof)
+getting inverse matrix from cached data
+     [,1] [,2]
+[1,]   -2    3
+[2,]    3   -4
+> y <- rbind(c(1,0,5),c(2,1,6),c(3,4,0))
+> y
+     [,1] [,2] [,3]
+[1,]    1    0    5
+[2,]    2    1    6
+[3,]    3    4    0
+> loy <- makeCacheMatrix(y)
+> cacheSolve(loy)
+     [,1] [,2] [,3]
+[1,]  -24   20   -5
+[2,]   18  -15    4
+[3,]    5   -4    1
+> cacheSolve(loy)
+getting inverse matrix from cached data
+     [,1] [,2] [,3]
+[1,]  -24   20   -5
+[2,]   18  -15    4
+[3,]    5   -4    1
+> 
